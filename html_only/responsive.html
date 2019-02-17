@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html and responsive</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Description" content="Resize text and image using media queries.">
+	<meta name="keyword" content="html_only">
+
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+
+		.left{
+			background-color: #2196F3;
+			padding: 20px;
+			float: left;
+			width:20%;
+		}
+
+		.main{
+
+			background-color: #f1f1f1;
+			padding: 20px;
+			float: left;
+			width: 60%;
+		}
+
+		.right{
+
+			background-color:#4CAF50;
+			padding:20px;
+			float: left;
+			width: 20%;
+		}
+
+       /* Use a media query to add a break point at 800px: */
+
+			@media screen and (max-width: 800px){
+
+				.left, .main, .right{
+
+					width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+				}
+			}
+
+	</style>
+</head>
+<body>
+<!--   When making responsive web pages, add the following 
+<meta> element in all  my web pages.
+
+<meta
+ -->
+
+ <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<!-- Responsive images. 
+	==========================
+	 Responsive images are images that scale nicely to fit any browser size.
+	 If the CSS with propert is set to 100%, The image will be responsive scale up and down.
+
+	 Notice that in the example above, the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the max-width property instead.
+-->
+
+<!--  Usingthe max-width property -->
+<img src="images/htmlLayaut.PNG" style="max-width:100%;height:auto;">
+<!--  Show different images Depending on  Browser widht -->
+
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_smallflower.jpg" alt="Flowers">
+</picture>
+
+<!--  Responsive text Size -->
+
+<h1 style="font-size:10vw">Hello World</h1>
+
+<!--   Media queries 
++++++++++++++++++++
+In additional to resize text and images, it  is also common to use media queries in responsive web pages.
++++++++
+ -->
+
+<h2> Media Queries. </h2>
+<p> Resize the browser window. </p>
+<p> Make sure your reach the breakpoint art 800 when resizing this frame.</p>
+
+<div class="left">
+	<p>Left Menu</p>
+</div>
+<div class="main">
+	<p>Main Menu</p>
+</div>
+<div class="right"> <p>
+	Right Menu
+</p> 
+</div>
+
+<!--  A great way to create responsive Web Design  is to 
+  to use a responsive style sheet, like W3.CSS.
+
+  It easy to develop sites that look nice at any size; desktop, laptop, tablet or phone
+
+  example, have a look in
+
+  // responsive_full_example.html
+  -->
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html and images</title>
+</head>
+<body>
+<!-- 
+IMAGES CAN  improve appearance of web pages.
+
+ -->
+ <img src="imag_chania.jpg">
+
+ <!-- alt attribute.  Note alt is required. Web page will not validate without it. -->
+ <img src="imag_ori.jpg" alt="or pc">
+
+ <!-- width and height attribute
+
+Note: Always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.
+  -->
+
+  <img src="html5.gif" alt="html5 icon" width="300" height="200">
+
+  <!--  Images in Another folder.
+==============================================
+If not specified, the browser expects to find the image in the same folder as the web page.
+
+However, it is common to store images in a sub-folder. You must then include the folder name in the src attribute
+================
+   -->
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width: 300, html400px" >
+
+<!--  Images on Another Server 
+Some Web sites stores their images on  images server.
+
+-->
+<img src="https://www.agri.co/sources/images/exampl2.hmtl" alt="agrico">
+
+<!--  Image floating : use the css float property to let the image float to the right or left -->
+
+<img src="smiley.gif" alt="smile"  style="float: right;" width="" height="">
+
+<!-- Images Maps
+=========================================================
+The <map> tag defines an image-map. An image-map is an image with clicable areas.
+ -->
+
+ <img src="images/workplace.jpg" alt="workplace" usemap="#workmap">
+
+ <map name="workmap">
+<area shape="rect"coords="34,44,270,350" alt="Computer" href="computer.html">
+<area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.html">
+<area shape="circle" coords="337,300.44" alt="coffee" href="coffe.html">
+
+ </map>
+</body>
+</html>
