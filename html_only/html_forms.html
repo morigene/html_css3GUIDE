@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html and forms.</title>
+</head>
+<body>
+
+<!--  HTML  Forms  -->
+
+<form>
+	
+	<input type="text" name="fn"> <br><br>
+	<input type="radio" name="gender" value="male" checked>Male<br />
+	<input type="radio" name="gender" value="female">Female <br />
+	<input type="radio" name="gender" value="others"> Other
+
+	<input type="checkbox" name="vehicle1" value="A Car">I have a Car
+	<input type="checkbox" name="vehicle1" value="A Bike">I have a Bike
+	<!--   submit button -->
+	<input type="submit" name="submit" value="submit">
+
+	<!--  The Action attribute.
+    ============================
+     Define action to be performed when when the form is submitted. Normally, the form data is sent to  a web page on the server when the user cicks on the submit button.
+
+     ex : <form action=/action_page.php>
+
+     	 The target attribute.
+     	  specifies if the submitted result will open in a nww browser, tab, a frame or current window
+
+     	  _self which means the form will be submitted in the current window.
+     	  _blank result open in a new browser tab
+
+     	  ex: <form action="/action_page.php" target="_blank">
+     	  	_parent or _top represent name of  iframe
+    ====
+	 -->
+
+	 <!--  
+    The method attribute
+    =====================  
+
+    specifies  HTTP method(GET or POST to be used in submitted data
+
+    ex: <form action="/action_page.php" method="get"> 
+
+    ====
+	  -->
+</form>
+
+	 <!--  The Name Attribute
+    ================
+    Each input field must hava a name attribute to be submitted.
+
+    If the name attribute is omitted, the data of that field will not be sent at all.
+    This example will only submit the Last name
+    ===
+	   -->
+  <form action="/action_page.php">
+  First name:<br>
+  <input type="text" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+  <!--   
+ 
+ Grouping Form Data with <fiedset>
+
+ The <fieldset> element is used to group related data in a form.
+The <legend> element defines a caption for the <fieldset> element.
+ -->
+
+ <form>
+ 	<fieldset>
+ 		
+ 		<legend>Person Information</legend>
+ 		<input type="text" name="firstname"> Firstname: <br>
+ 		<input type="text" name="lastname"> Lastname: <br />
+ 		<input type="submit" name="submit" value="submit">
+ 	</fieldset>
+
+ </form>
+
+   <!--  Select input type -->
+<br>
+<br>
+   <select name="cars">
+   	<option value="volvo">Volvo</option>
+    <option value="saab">saab</option>
+    <option value="fiat">fiat</option>
+    <option value="audi">Audi</option>
+   </select>
+
+   <br>
+   <br>
+   <!--  select input type with specified number of visible values. -->
+   <select name="cars2" size="3">
+   	<option>volkswagen</option>
+   	<option>mitsubish</option>
+   	<option>toyota</option>
+   	<option>kia</option>
+
+   </select>
+   <br>
+   <br>
+
+   <!--  select input  with multiple selection  -->
+    <select name="cars2" size="4" multiple>
+   	<option>volkswagen</option>
+   	<option>mitsubish</option>
+   	<option>toyota</option>
+   	<option>kia</option>
+
+   </select>
+   <br />
+   <br />
+<!--  Text area input type -->
+   <textarea name="message" rows="10" cols="30">
+   	The cat was playing  in the garden.
+
+   </textarea>
+   <br>
+   <br>
+<!--  the button element -->
+<input type="button" name="ok" value="ok" onclick="alert('Hi')" >
+
+<!--  HTML5 Form Elements
+=============
+HTML5 added the following form elementsw :
+
+<datalist>
+<output>
+===
+ -->
+ <br />
+ <br />
+<form>
+	<input list="browsers">
+	<datalist id="browsers">
+		<option value="Internet Explorer"></option>
+		<option value="Firefox"></option>
+		<option value="Chrome"></option>
+		<option value="Opera"></option>
+		<option value="Safari"></option>
+	</datalist>
+</form>
+
+<!-- outptut -->
+
+<form oninput="x.value=parseInt(a.value) + parseInt(b.value)">
+	
+	0<input type="range" id="a" name="a" value="50">
+	100 + <input type="number" name="b" value="50">
+  = <output name="x" for="a b"></output>
+  <br>
+  <br>
+  <input type="submit" name="">
+</form>
+
+<br>
+<br>
+
+<!--  Other HTML5 input type elements
+==========================
+HTML5 added several new input types:
+
+color
+date
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+======
+  -->
+
+  <input type="color" name="fcolor">
+  <input type="date" name="date">
+  <!--  min and max attribute -->
+  Enter a date before 1980-01-01:<input type="date" name="bday" max="1979-12-31"><br><br>
+  Enter a date after 2000-01-01: <input type="date" name="bday" min="2001-01-02"><br><br>
+ <input type="submit" name="submit">
+</body>
+</html>
