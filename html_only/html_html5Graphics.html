@@ -1,0 +1,40 @@
+<!-- 
+Canvas : element is used to draw graphics, on the fly via javascipt.
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>html graphics</title>
+ </head>
+ <body>
+  <canvas id="myconvas" width="200" height="100" style="border: 1px solid black"></canvas>
+
+  <canvas id="myconvas2" width="200" height="100" style="border: 1px solid black"></canvas>
+
+  <!--  draw a line. -->
+
+  <script type="text/javascript">
+  	var c = document.getElementById('myconvas2');
+  	var ctx = c.getContext("2d");
+  	ctx.moveTo(0,0)
+  	ctx.lineTo(200, 100);
+  	ctx.stroke();
+
+  	var c2 = document.getElementById("myConvas2");
+  	var ctx2 = c.getContext("2d");
+  	ctx2.beginPath();
+  	ctx2.arc(95, 50, 40, 0, 2 * Math.PI);
+  	ctx2.stroke();
+
+  	var grd = ctx2.createRadialGradient(75,50,5,90,60,100\);
+  	grd.addColorStop(0,"red");
+  	grd.addColorStop(1, "white");
+
+  	//Fill with gradient.
+  	ctx2.fillStyle =grd;
+  	ctx2.fillRect  =(10, 10, 150,80);
+  	
+  	//
+  </script>
+ </body>
+ </html>

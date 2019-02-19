@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html</title>
+</head>
+<body>
+<!-- 
+HTML Helpers(Plug-ins)
+Helper applications(plug-ins) are computer programs that extend 
+ web browser functionality.
+ Plug-ins can be added to web pages with the <object> tag or the <embed> tag. 
+
+Plug-ins can be used for many purposes: display maps, scan for viruses, verify your bank id, etc.
+ -->
+ <object width="100%" height="500px" data="snippet.html or image.jpeg"></object>
+ <embed width="400" height="50" src="bookmark.swf">
+ <embed src="audi.jpeg">
+
+ 	<!--  
+       YouTube Videos
+       ===============================================
+        Earlier in this tutorial, you have seen that you might have to convert your video to different formats   to make them play  in all browsers
+       ======
+
+ Playing a YouTube Video in HTML
+To play your video on a web page, do the following:
+
+Upload the video to YouTube
+Take a note of the video id
+Define an <iframe> element in your web page
+Let the src attribute point to the video URL
+Use the width and height attributes to specify the dimension of the player
+Add any other parameters to the URL (see below)
+ 	 -->
+
+
+ 	 <iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+
+<!--  
+ youtube autoplay.
+ value 0: The video will not play automatically when the player loads
+ value 1:
+
+ Note: Take careful consideration when deciding to autoplay your videos. Automatically starting a video can annoy your visitor and end up causing more harm than good.
+ -->
+ <p><h3>youtube autoplay</h3>
+ 	
+ Note: Take careful consideration when deciding to autoplay your videos. Automatically starting a video can annoy your visitor and end up causing more harm than good.
+ ></p>
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+</iframe>
+
+<!--  youtube loop. -->
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe>
+</body>
+</html>
